@@ -1,7 +1,5 @@
-import store from '@/store'
 import { getToken } from '@/utils/auth'
 import axios from 'axios'
-import { Message, MessageBox, Notification } from 'element-ui'
 
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 // 创建axios实例
@@ -30,23 +28,9 @@ service.interceptors.response.use(res => {
     const code = res.data.code
     //登录过期
     if (code === "000021") {
-      MessageBox.confirm(
-        '登录状态已过期，您可以继续留在该页面，或者重新登录',
-        '系统提示',
-        {
-          confirmButtonText: '重新登录',
-          cancelButtonText: '取消',
-          type: 'warning'
-        }
-      ).then(() => {
-        store.dispatch('LogOut').then(() => {
-          location.reload() // 为了重新实例化vue-router对象 避免bug
-        })
-      })
+      alert('登录状态已过期，您可以继续留在该页面，或者重新登录',)
     } else if (code !== "000000") {
-      Notification.error({
-        title: res.data.msg
-      })
+      alert(`${res.data.msg}`,)
       return Promise.reject('error')
     } else {
       return res.data
@@ -54,11 +38,6 @@ service.interceptors.response.use(res => {
   },
   error => {
     console.log('err' + error)
-    Message({
-      message: error.message,
-      type: 'error',
-      duration: 5 * 1000
-    })
     return Promise.reject(error)
   }
 )
