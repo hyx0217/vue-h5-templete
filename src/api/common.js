@@ -7,3 +7,11 @@ export function getTopic(){
     method:'GET'
   })
 }
+//获取主题详情
+export function getTopicDetail(params){
+  return request({
+    url:'/getTopicDetail',
+    method:'GET',
+    params
+  })
+}

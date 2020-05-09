@@ -2,22 +2,26 @@
   <div class="about">
     <ul>
       <li v-for="item in list"
-          :key="item.id">{{item.title}}</li>
+          :key="item.id"
+          @click="toDetail(item.id)">{{item.title}}</li>
     </ul>
   </div>
 </template>
 <script>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref,getCurrentInstance } from 'vue'
 import { getTopic } from '@/api/common.js'
 export default {
   setup () {
-    const list = ref([])
+    const { ctx } = getCurrentInstance();
+    const list = ref([]);
     onMounted(async () => {
       let res = await getTopic();
-      console.lo
       list.value = res.data;
     })
-    return { list }
+    const toDetail=(id)=>{
+        ctx.$router.push(`/detail?id=${id}`)
+    }
+    return { list,toDetail }
   }
 }
 </script>
