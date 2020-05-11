@@ -4,7 +4,7 @@
          src="../assets/logo.png">
     <h1>text count：{{count}}</h1>
     <h2>double count：{{doubleCount}}</h2>
-
+    <input v-model="count"/>
     <button @click="addCount">+</button>
     <button @click="lowCount">-</button>
     <button @click="toAbout">跳转</button>
