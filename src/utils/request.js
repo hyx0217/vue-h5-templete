@@ -13,7 +13,7 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     if (getToken()) {
-      config.headers['token'] = getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
+      config.headers['token'] =`${getToken()}`  // 让每个请求携带自定义token 请根据实际情况自行修改
     }
     return config
   },
@@ -27,9 +27,9 @@ service.interceptors.request.use(
 service.interceptors.response.use(res => {
     const code = res.data.code
     //登录过期
-    if (code === "000021") {
+    if (code === 401) {
       alert('登录状态已过期，您可以继续留在该页面，或者重新登录',)
-    } else if (code !== "000000") {
+    } else if (code !== 1) {
       alert(`${res.data.msg}`,)
       return Promise.reject('error')
     } else {

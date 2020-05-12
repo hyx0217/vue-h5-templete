@@ -79,7 +79,7 @@ export default {
         return false;
       }
       isRunCode.value = true
-      second.value = props._setTime //倒数秒数
+      second.value = props.setTime //倒数秒数
       countDown = setInterval(() => {
         second.value--
         if (second.value === 0) {
@@ -106,7 +106,7 @@ export default {
       return type == 'password' ? 'text' : type
     })
     const _isShowPass = computed(() => String(props.isShowPass) !== 'false')
-    const _isShowCode = computed(() => String(props.isShowPass) !== 'false')
+    const _isShowCode = computed(() => String(props.isShowCode) !== 'false')
     const _setTime = computed(() => {
       const setTime = Number(props.setTime)
       return setTime > 0 ? setTime : 60

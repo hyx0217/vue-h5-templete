@@ -51,15 +51,17 @@
 import wInput from '../components/watch-login/watch-input.vue' //input
 import wButton from '../components/watch-login/watch-button.vue' //button
 import { ref } from 'vue'
-import { login } from '@/api/login.js'
+import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
 export default {
   setup () {
+    const router=useRouter();
+    const store = useStore();
     const phoneData = ref('');
     const passData = ref('');
     const isRotate = ref(false);
     const startLogin = async () => {
       //登录
-      console.log(phoneData.value)
       if (isRotate.value) {
         //判断是否加载中，避免重复点击请求
         return false;
@@ -72,19 +74,14 @@ export default {
         alert('密码不少于5位')
         return;
       }
-
       isRotate.value = true
       try {
-        let data={user_name: phoneData.value,password:passData.value };
-        let res = await login(data);
-        console.log(res)
-        setTimeout(function () {
-          isRotate.value = false
-        }, 3000)
+        let data = { userName: phoneData.value, password: passData.value };
+        await store.dispatch('Login', data)
+        isRotate.value = false
+        router.replace('home')
       } catch (error) {
-        setTimeout(function () {
-          isRotate.value = false
-        }, 3000)
+        isRotate.value = false
       }
 
     }
@@ -92,7 +89,7 @@ export default {
       phoneData,
       passData,
       isRotate,
-      startLogin
+      startLogin,
     }
   },
   components: {
