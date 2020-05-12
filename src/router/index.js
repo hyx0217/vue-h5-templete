@@ -9,13 +9,13 @@ const routes = [
   },
   {
     path: '/login',
-    name: 'index',
+    name: 'login',
     component: () =>
     import(/* webpackChunkName: "about" */ '../views/login.vue')
   },
   {
     path: '/register',
-    name: 'index',
+    name: 'register',
     component: () =>
     import(/* webpackChunkName: "about" */ '../views/register.vue')
   },

@@ -83,7 +83,6 @@ export default {
       } catch (error) {
         isRotate.value = false
       }
-
     }
     return {
       phoneData,
