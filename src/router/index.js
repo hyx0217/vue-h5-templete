@@ -26,6 +26,12 @@ const routes = [
     import(/* webpackChunkName: "about" */ '../views/forget.vue')
   },
   {
+    path: '/signin_github',
+    name: 'github',
+    component: () =>
+    import(/* webpackChunkName: "about" */ '../views/github.vue')
+  },
+  {
     path: '',
     redirect: 'home',
     component: () =>

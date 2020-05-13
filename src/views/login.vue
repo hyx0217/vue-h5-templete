@@ -33,7 +33,7 @@
         </div>
         <div class="login_icon">
           <div class="cuIcon-github"
-               @click="login_github"></div>
+               @click="loginGithub"></div>
         </div>
       </div>
 
@@ -55,7 +55,7 @@ import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 export default {
   setup () {
-    const router=useRouter();
+    const router = useRouter();
     const store = useStore();
     const phoneData = ref('');
     const passData = ref('');
@@ -84,11 +84,16 @@ export default {
         isRotate.value = false
       }
     }
+    //github登录
+    const loginGithub = () => {
+      window.location.href = 'https://github.com/login/oauth/authorize?client_id=132c598d286e32f9faea&redirect_uri=http://localhost:8080/signin_github'
+    }
     return {
       phoneData,
       passData,
       isRotate,
       startLogin,
+      loginGithub
     }
   },
   components: {
