@@ -1,10 +1,14 @@
-import { login } from '@/api/login'
+import { getUser, login } from '@/api/login'
 import Vuex from 'vuex'
 import { getToken, removeToken, setToken } from '../utils/auth'
+
 export default Vuex.createStore({
   state: {
     token: getToken(),
-    user: {}
+    user: ''
+  },
+  getters:{
+    user:state=>state.user
   },
   mutations: {
     SET_TOKEN: (state, token) => {
@@ -30,7 +34,20 @@ export default Vuex.createStore({
           })
       })
     },
-    // 登录
+    // 获取登录用户信息
+    GetUser({ commit }) {
+      return new Promise((resolve, reject) => {
+        getUser()
+          .then((res) => {
+            commit('SET_USER', res.data)
+            resolve()
+          })
+          .catch((error) => {
+            reject(error)
+          })
+      })
+    },
+    // 登出
     Logout({ commit }) {
       removeToken()
       commit('SET_TOKEN', '')

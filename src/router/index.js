@@ -20,6 +20,12 @@ const routes = [
     import(/* webpackChunkName: "about" */ '../views/register.vue')
   },
   {
+    path: '/forget',
+    name: 'forget',
+    component: () =>
+    import(/* webpackChunkName: "about" */ '../views/forget.vue')
+  },
+  {
     path: '',
     redirect: 'home',
     component: () =>

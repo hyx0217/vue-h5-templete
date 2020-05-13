@@ -16,11 +16,26 @@ export function register(data){
     data
   })
 }
+//重置密码
+export function forget(data){
+  return request({
+    url:'/forget',
+    method:'post',
+    data
+  })
+}
 //获取列表
 export function getList(data){
   return request({
     url:'/getList',
     method:'post',
     data
+  })
+}
+//获取列表
+export function getUser(){
+  return request({
+    url:'/getUser',
+    method:'post'
   })
 }

@@ -3,22 +3,26 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import { getToken } from './utils/auth'
+
+createApp(App)
+  .use(router)
+  .use(store)
+  .mount('#app')
 router.beforeEach((to, from, next) => {
-  console.log(getToken())
+  //白名单路由
+  const whiteUrl = ['/login', '/forget', '/register']
   if (getToken()) {
     if (to.path === '/login') {
       next('/home')
+    } else {
+      store.dispatch('GetUser')
     }
     next()
   } else {
-    if (to.path === '/login') {
+    if (whiteUrl.includes(to.path)) {
       next()
     } else {
       next('/login')
     }
   }
 })
-createApp(App)
-  .use(router)
-  .use(store)
-  .mount('#app')

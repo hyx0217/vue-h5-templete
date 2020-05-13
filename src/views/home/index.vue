@@ -18,14 +18,14 @@
 </template>
 <script>
 import { useStore } from 'vuex'
-import { reactive, onMounted, ref } from 'vue'
+import { reactive, onMounted, ref, computed } from 'vue'
 import { getList } from '@/api/login.js'
 import { useRouter } from 'vue-router'
 export default {
   setup () {
     const router = useRouter()
     const store = useStore()
-    const user = reactive(store.state.user);
+    const user = computed(() => store.getters.user);
     const list = ref([])
     const queryParams = reactive({ page: 1, size: 100 })
     const logOut = () => { store.dispatch('Logout'); router.replace('login') }

@@ -30,7 +30,7 @@ service.interceptors.response.use(res => {
     if (code === 401) {
       alert('登录状态已过期，您可以继续留在该页面，或者重新登录',)
     } else if (code !== 1) {
-      alert(`${res.data.msg}`,)
+      alert(`${res.data.msg}`)
       return Promise.reject('error')
     } else {
       return res.data
