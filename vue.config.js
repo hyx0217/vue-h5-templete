@@ -3,7 +3,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 module.exports = {
-  publicPath: "/",
+  publicPath: "/web",
   configureWebpack: {
     name: 'vue3',
     resolve: {
