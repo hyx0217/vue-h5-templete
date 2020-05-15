@@ -1,4 +1,17 @@
+const path = require('path')
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
 module.exports = {
+  publicPath: "/",
+  configureWebpack: {
+    name: name,
+    resolve: {
+      alias: {
+        '@': resolve('src')
+      }
+    }
+  },
   devServer: {
     open: true,
     https: false,
