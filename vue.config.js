@@ -5,7 +5,7 @@ function resolve(dir) {
 module.exports = {
   publicPath: "/",
   configureWebpack: {
-    name: name,
+    name: 'vue3',
     resolve: {
       alias: {
         '@': resolve('src')
