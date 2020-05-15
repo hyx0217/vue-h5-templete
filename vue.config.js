@@ -3,7 +3,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 module.exports = {
-  publicPath: "/web",
+  publicPath: publicPath: process.env.NODE_ENV === "production" ? "/web" : "/",
   configureWebpack: {
     name: 'vue3',
     resolve: {
