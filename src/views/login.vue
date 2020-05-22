@@ -86,7 +86,8 @@ export default {
     }
     //github登录
     const loginGithub = () => {
-      window.location.href = 'https://github.com/login/oauth/authorize?client_id=132c598d286e32f9faea&redirect_uri=http://localhost:8080/signin_github'
+      const url = process.env.NODE_ENV === "production" ? "http://106.15.121.64/web/signin_github" : "http://localhost:8080/signin_github";
+      window.location.href = `https://github.com/login/oauth/authorize?client_id=132c598d286e32f9faea&redirect_uri=${url}`
     }
     return {
       phoneData,
