@@ -12,21 +12,13 @@
           type="text"
           maxlength="11"
           placeholder="用户名/电话"
-          @inputText="
-            val => {
-              phoneData = val;
-            }
-          "
+          v-model="phoneData"
         ></wInput>
         <wInput
           type="password"
           maxlength="11"
           placeholder="登录密码"
-          @inputText="
-            val => {
-              passData = val;
-            }
-          "
+          v-model="passData"
         ></wInput>
         <wInput
           type="number"
@@ -34,11 +26,7 @@
           placeholder="验证码1234"
           isShowCode
           ref="codeRef"
-          @inputText="
-            val => {
-              verCode = val;
-            }
-          "
+          v-model="verCode"
           @setCode="getVerCode()"
         ></wInput>
       </div>
