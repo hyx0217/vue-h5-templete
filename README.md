@@ -1,4 +1,4 @@
-# vue-next-test
+# test
 
 ## Project setup
 ```

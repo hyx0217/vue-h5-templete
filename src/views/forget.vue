@@ -8,102 +8,103 @@
       </div>
       <!-- 主体 -->
       <div class="main">
-        <wInput type="text"
-                maxlength="11"
-                placeholder="用户名/电话"
-                @inputText="(val)=>{phoneData=val}"></wInput>
-        <wInput type="password"
-                maxlength="11"
-                placeholder="登录密码"
-                @inputText="(val)=>{passData=val}"></wInput>
-        <wInput type="number"
-                maxlength="4"
-                placeholder="验证码1234"
-                isShowCode
-                ref="codeRef"
-                @inputText="(val)=>{verCode=val}"
-                @setCode="getVerCode()"></wInput>
-
+        <wInput
+          type="text"
+          maxlength="11"
+          placeholder="用户名/电话"
+          v-model="phoneData"
+        ></wInput>
+        <wInput
+          type="password"
+          maxlength="11"
+          placeholder="登录密码"
+          v-model="passData"
+        ></wInput>
+        <wInput
+          type="number"
+          v-model="verCode"
+          maxlength="4"
+          placeholder="验证码1234"
+          isShowCode
+          ref="codeRef"
+          @setCode="getVerCode()"
+        ></wInput>
       </div>
-
-      <wButton text="重置密码"
-               :rotate="isRotate"
-               @click.native="startForget"></wButton>
+      <wButton
+        text="重置密码"
+        :rotate="isRotate"
+        @click.native="startForget"
+      ></wButton>
     </div>
   </div>
 </template>
 
 <script>
-import wInput from '@/components/watch-login/watch-input.vue' //input
-import wButton from '@/components/watch-login/watch-button.vue' //button
-import { ref } from 'vue'
-import { useRouter} from 'vue-router'
-import { forget } from '@/api/login.js'
+import wInput from "@/components/watch-login/watch-input.vue"; //input
+import wButton from "@/components/watch-login/watch-button.vue"; //button
+import { forget } from "@/api/login.js";
+import { Toast } from "vant";
+
 export default {
-  setup () {
-    const router=useRouter();
-    const phoneData = ref(''); // 用户/电话
-    const passData = ref('');//密码
-    const verCode = ref('');//验证码
-    const isRotate = ref(false);//是否加载旋转
-    const codeRef = ref(null)//暴露给模板用以获取组件实例，类似this.$refs
-    function goBack(){
-      router.go(-1)
-    }
-    const getVerCode = () => {
+  data() {
+    return {
+      phoneData: "", //电话
+      passData: "", //密码
+      verCode: "", //验证码
+      isRotate: false //是否加载旋转
+    };
+  },
+  methods: {
+    goBack() {
+      this.$router.go(-1);
+    },
+    getVerCode() {
       //获取验证码
-      if (phoneData.value.length != 11) {
-        alert('手机号不正确')
+      if (this.phoneData.length != 11) {
+        Toast("手机号不正确");
         return false;
       }
-      console.log("获取验证码")
-      codeRef.value.runCode(); //触发倒计时（一般用于请求成功验证码后调用）
-      setTimeout(function () {
-        codeRef.value.runCode(0); //假装模拟下需要 终止倒计时
-      }, 60000)
-    }
-    const startForget = async () => {
+      console.log("获取验证码");
+      this.$refs.runCode.$emit("runCode"); //触发倒计时（一般用于请求成功验证码后调用）
+      setTimeout(() => {
+        this.$refs.runCode.$emit("runCode", 0); //假装模拟下需要 终止倒计时
+      }, 60000);
+    },
+    async startForget() {
       //注册
-      if (isRotate.value) {
+      if (this.isRotate) {
         //判断是否加载中，避免重复点击请求
         return false;
       }
-      if (phoneData.value.length != 11) {
-        alert('手机号不正确')
+      if (this.phoneData.length != 11) {
+        Toast("手机号不正确");
         return false;
       }
-      if (passData.value.length < 6) {
-        alert('密码长度最少六位')
+      if (this.passData.length < 6) {
+        Toast("密码长度最少六位");
         return false;
       }
-      if (verCode.value !== '1234') {
-        alert('验证码不正确')
+      if (this.verCode !== "1234") {
+        Toast("验证码不正确");
         return false;
       }
-      isRotate.value = true
+      this.isRotate = true;
       try {
-        await forget({ userName: phoneData.value, password: passData.value })
-        alert("重置密码成功")
-        isRotate.value = false
-        goBack()
-        
+        await forget({ userName: this.phoneData, password: this.passData });
+        Toast("重置密码成功");
+        this.isRotate = false;
+        this.goBack();
       } catch (error) {
-        console.log(error)
-        isRotate.value = false
+        console.log(error);
+        this.isRotate = false;
       }
-    }
-    return {
-      phoneData,
-      passData,
-      verCode,
-      isRotate, getVerCode, startForget, codeRef,goBack
     }
   },
   components: {
     wInput,
-    wButton,
+    wButton
   }
-}
+};
 </script>
 
 <style>

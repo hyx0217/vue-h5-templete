@@ -1,42 +1,45 @@
 <template>
   <div>
     <!-- 按钮 -->
-    <button :class="['buttonBorder',!_rotate?'dlbutton':'dlbutton_loading']"
-            :style="{'background':bgColor, 'color': fontColor}">
-      <div :class="_rotate?'rotate_loop':''">
-        <span v-if="_rotate"
-              class="cuIcon cuIcon-loading1 "></span>
+    <button
+      :class="['buttonBorder', !_rotate ? 'dlbutton' : 'dlbutton_loading']"
+      :style="{ background: bgColor, color: fontColor }"
+    >
+      <div :class="_rotate ? 'rotate_loop' : ''">
+        <span v-if="_rotate" class="cuIcon cuIcon-loading1 "></span>
         <span v-if="!_rotate">{{ text }}</span>
       </div>
     </button>
   </div>
 </template>
+
 <script>
-import { computed } from 'vue'
 export default {
   props: {
     text: String, //显示文本
     rotate: {
       //是否启动加载
       type: [Boolean, String],
-      default: false,
+      default: false
     },
     bgColor: {
       //按钮背景颜色
       type: String,
-      default: "linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.6))",
+      default: "linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.6))"
     },
     fontColor: {
       //按钮字体颜色
       type: String,
-      default: "#FFFFFF",
-    },
+      default: "#FFFFFF"
+    }
   },
-  setup (props) {
-    const _rotate = computed(() => String(props.rotate) !== 'false');
-    return { _rotate }
+  computed: {
+    _rotate() {
+      //处理值
+      return String(this.rotate) !== "false";
+    }
   }
-}
+};
 </script>
 
 <style>

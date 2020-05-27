@@ -1,41 +1,65 @@
 <template>
   <div>
-    <h3 class="login-out"
-        @click="logOut">退出</h3>
+    <h3 class="login-out" @click="logOut">退出</h3>
     <div class="header">
       <img src="@/assets/logo-home.png" />
     </div>
-    <div class="flex">用户名：{{user.userName}}</div>
-    <div class="flex-col list">
-      <div class="mtb-20"
-           v-for="item in list"
-           :key="item.id">
-        <img :src="item.img">
-        <div>{{item.name}}</div>
+    <div class="flex">用户名：{{ user.userName }}</div>
+    <vant-list
+      class="flex-col list"
+      v-model="loading"
+      :finished="finished"
+      finished-text="没有更多了"
+      @load="getList"
+    >
+      <div class="mtb-20" v-for="item in list" :key="item.id">
+        <img :src="item.img" />
+        <div>{{ item.name }}</div>
       </div>
-    </div>
+    </vant-list>
   </div>
 </template>
 <script>
-import { useStore } from 'vuex'
-import { reactive, onMounted, ref, computed } from 'vue'
-import { getList } from '@/api/login.js'
-import { useRouter } from 'vue-router'
+import { List } from "vant";
+import { getList } from "@/api/login.js";
+import { mapGetters } from "vuex";
 export default {
-  setup () {
-    const router = useRouter()
-    const store = useStore()
-    const user = computed(() => store.getters.user);
-    const list = ref([])
-    const queryParams = reactive({ page: 1, size: 100 })
-    const logOut = () => { store.dispatch('Logout'); router.replace('login') }
-    onMounted(async () => {
-      let res = await getList(queryParams)
-      list.value = [...res.data.list, list.value]
-    })
-    return { user, list, logOut }
+  components: {
+    vantList: List
+  },
+  data() {
+    return {
+      list: [],
+      queryParams: { page: 1, size: 5 },
+      loading: false,
+      finished: false
+    };
+  },
+  computed: {
+    ...mapGetters(["user"])
+  },
+  methods: {
+    logOut() {
+      this.$store.dispatch("Logout");
+      this.$router.replace("login");
+    },
+    async getList() {
+      try {
+        if (this.finished) return;
+        this.loading = true;
+        let res = await getList(this.queryParams);
+        this.list = [...this.list, ...res.data.list];
+        this.finished = this.list.length >= res.data.total;
+        this.loading = false;
+        this.queryParams.page++;
+      } catch (error) {
+        this.loading = false;
+        this.finished = true;
+        console.log(error);
+      }
+    }
   }
-}
+};
 </script>
 <style>
 @import url("../../components/watch-login/css/icon.css");

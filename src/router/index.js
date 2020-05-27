@@ -1,47 +1,42 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import Vue from "vue";
+import Router from "vue-router";
+Vue.use(Router);
 
 const routes = [
   {
-    path: '/home',
-    name: 'home',
-    component: () =>
-    import(/* webpackChunkName: "about" */ '../views/home')
+    path: "/home",
+    name: "home",
+    component: () => import(/* webpackChunkName: "about" */ "../views/home")
   },
   {
-    path: '/login',
-    name: 'login',
+    path: "/login",
+    name: "login",
     component: () =>
-    import(/* webpackChunkName: "about" */ '../views/login.vue')
+      import(/* webpackChunkName: "about" */ "../views/login.vue")
   },
   {
-    path: '/register',
-    name: 'register',
+    path: "/register",
+    name: "register",
     component: () =>
-    import(/* webpackChunkName: "about" */ '../views/register.vue')
+      import(/* webpackChunkName: "about" */ "../views/register.vue")
   },
   {
-    path: '/forget',
-    name: 'forget',
+    path: "/forget",
+    name: "forget",
     component: () =>
-    import(/* webpackChunkName: "about" */ '../views/forget.vue')
+      import(/* webpackChunkName: "about" */ "../views/forget.vue")
   },
   {
-    path: '/signin_github',
-    name: 'github',
+    path: "/signin_github",
+    name: "github",
     component: () =>
-    import(/* webpackChunkName: "about" */ '../views/github.vue')
+      import(/* webpackChunkName: "about" */ "../views/github.vue")
   },
   {
-    path: '',
-    redirect: 'home',
-    component: () =>
-    import(/* webpackChunkName: "about" */ '../views/home')
+    path: "",
+    redirect: "home",
+    component: () => import(/* webpackChunkName: "about" */ "../views/home")
   }
-]
+];
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes,
-})
-
-export default router
+export default new Router({ routes });
