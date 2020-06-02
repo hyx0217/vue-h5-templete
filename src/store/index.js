@@ -4,7 +4,8 @@ import { getUser, login } from "@/api/login";
 import { getToken, removeToken, setToken } from "../utils/auth";
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+export function createStore() {
+ return new Vuex.Store({
   state: {
     token: getToken(),
     user: ""
@@ -58,3 +59,4 @@ export default new Vuex.Store({
   },
   modules: {}
 });
+} 

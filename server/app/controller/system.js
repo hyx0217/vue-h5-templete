@@ -1,7 +1,38 @@
 'use strict';
+const fs = require('fs');
+const path = require('path');
+const resolve = file => path.resolve(__dirname, file);
 const Controller = require('../core/base_controller');
+const { createBundleRenderer } = require('vue-server-renderer');
+const bundle = require('../../dist/vue-ssr-server-bundle.json');
+const clientManifest = require('../../dist/vue-ssr-client-manifest.json');
+const renderer = createBundleRenderer(bundle, {
+  runInNewContext: false,
+  template: fs.readFileSync(resolve('../../dist/index.html'), 'utf-8'),
+  clientManifest,
+});
+
+const renderToString = context => {
+  return new Promise((resolve, reject) => {
+    renderer.renderToString(context, (err, html) => {
+      err ? reject(err) : resolve(html);
+    });
+  });
+};
 const pMap = require('p-map');
 class HomeController extends Controller {
+  async getSSR() {
+    const {
+      ctx,
+    } = this;
+    let html = '';
+    try {
+      html = await renderToString(ctx);
+      ctx.body = html;
+    } catch (e) {
+      this.notFound(e);
+    }
+  }
   // 登录
   async login() {
     const {

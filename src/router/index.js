@@ -39,4 +39,6 @@ const routes = [
   }
 ];
 
-export default new Router({ routes });
+export function createRouter(){
+  return new Router({ mode: 'history', routes });
+} 
