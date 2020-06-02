@@ -64,7 +64,6 @@ export default {
         Toast("手机号不正确");
         return false;
       }
-      console.log("获取验证码");
       this.$refs.runCode.$emit("runCode"); //触发倒计时（一般用于请求成功验证码后调用）
       setTimeout(() => {
         this.$refs.runCode.$emit("runCode", 0); //假装模拟下需要 终止倒计时
@@ -95,7 +94,6 @@ export default {
         this.isRotate = false;
         this.goBack();
       } catch (error) {
-        console.log(error);
         this.isRotate = false;
       }
     }

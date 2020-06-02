@@ -1,9 +1,9 @@
 const path = require('path');
 const VueSSRServerPlugin = require('vue-server-renderer/server-plugin');
 const VueSSRClientPlugin = require('vue-server-renderer/client-plugin');
-
 const TARGET_NODE = process.env.WEBPACK_TARGET === 'node';
 const entry = TARGET_NODE ? 'server' : 'client';
+const merge = require('lodash.merge');
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
@@ -15,6 +15,17 @@ module.exports = {
       template: 'public/index.html',
     },
   },
+  chainWebpack: (config) => {
+    // 关闭vue-loader中默认的服务器端渲染函数
+    config.module
+        .rule('vue')
+        .use('vue-loader')
+        .tap((options) => {
+            merge(options, {
+                optimizeSSR: false,
+            });
+        });
+},
   configureWebpack: {
     name: 'vue3',
     resolve: {
