@@ -5,6 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:server":"set WEBPACK_TARGET=node && vue-cli-service build" ,
+    "build:client":"set WEBPACK_TARGET=web && vue-cli-service build" ,
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

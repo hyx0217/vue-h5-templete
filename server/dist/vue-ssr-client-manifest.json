@@ -1,26 +1,26 @@
 {
-  "publicPath": "/web/",
+  "publicPath": "/",
   "all": [
     "css/about.027f84ad.css",
     "css/chunk-vendors.91c27321.css",
     "favicon.ico",
     "img/logo-home.af2e0a28.png",
     "index.html",
-    "js/about.9e80bd9f.js",
-    "js/about.9e80bd9f.js.map",
+    "js/about.1b00f8e1.js",
+    "js/about.1b00f8e1.js.map",
     "js/chunk-vendors.e810e508.js",
     "js/chunk-vendors.e810e508.js.map",
-    "js/index.067c56b9.js",
-    "js/index.067c56b9.js.map"
+    "js/index.2747907e.js",
+    "js/index.2747907e.js.map"
   ],
   "initial": [
     "css/chunk-vendors.91c27321.css",
     "js/chunk-vendors.e810e508.js",
-    "js/index.067c56b9.js"
+    "js/index.2747907e.js"
   ],
   "async": [
     "css/about.027f84ad.css",
-    "js/about.9e80bd9f.js"
+    "js/about.1b00f8e1.js"
   ],
   "modules": {
     "18672332": [

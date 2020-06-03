@@ -3,18 +3,22 @@ const VueSSRServerPlugin = require('vue-server-renderer/server-plugin');
 const VueSSRClientPlugin = require('vue-server-renderer/client-plugin');
 const TARGET_NODE = process.env.WEBPACK_TARGET === 'node';
 const entry = TARGET_NODE ? 'server' : 'client';
+const isPro = process.env.NODE_ENV !== 'development';
 const merge = require('lodash.merge');
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/web' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
   pages: {
     index: {
       entry: `src/entry.${entry}.js`,
       template: 'public/index.html',
     },
   },
+  css: {
+    extract: isPro && !TARGET_NODE ? true : false,
+},
   chainWebpack: (config) => {
     // 关闭vue-loader中默认的服务器端渲染函数
     config.module
@@ -47,6 +51,7 @@ module.exports = {
     },
     // vue-cli4.0，webpack打包默认采用分包，服务端打包不能用分包，会报错。
     optimization: {splitChunks: TARGET_NODE ? false : undefined},
+
     plugins: [
       // 根据之前配置的环境变量判断打包为客户端/服务器端Bundle
       TARGET_NODE ? new VueSSRServerPlugin() : new VueSSRClientPlugin(),

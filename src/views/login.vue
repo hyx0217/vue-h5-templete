@@ -55,6 +55,9 @@ import wInput from "../components/watch-login/watch-input.vue"; //input
 import wButton from "../components/watch-login/watch-button.vue"; //button
 import { Toast } from "vant";
 export default {
+  asyncData () {
+    // 触发 action 后，会返回 Promise
+  },
   data() {
     return {
       phoneData: "", //用户/电话
@@ -89,11 +92,11 @@ export default {
     },
     //github登录
     loginGithub() {
-      const url =
-        process.env.NODE_ENV === "production"
-          ? "http://106.15.121.64/web/signin_github"
-          : "http://localhost:8080/signin_github";
-      window.location.href = `https://github.com/login/oauth/authorize?client_id=132c598d286e32f9faea&redirect_uri=${url}`;
+      // const url =
+      //   process.env.NODE_ENV === "production"
+      //     ? "http://106.15.121.64/web/signin_github"
+      //     : "http://localhost:8080/signin_github";
+      // window.location.href = `https://github.com/login/oauth/authorize?client_id=132c598d286e32f9faea&redirect_uri=${url}`;
     }
   },
   components: {
