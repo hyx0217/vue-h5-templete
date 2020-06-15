@@ -55,7 +55,7 @@
 <script>
 import wInput from "@/components/watch-login/watch-input.vue";
 import wButton from "@/components/watch-login/watch-button.vue";
-import { register } from "@/api/login.js";
+import { register } from "@/api/login.ts";
 import { Toast } from "vant";
 
 export default {

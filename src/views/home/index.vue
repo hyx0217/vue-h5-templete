@@ -21,7 +21,7 @@
 </template>
 <script>
 import { List } from "vant";
-import { getList } from "@/api/login.js";
+import { getList } from "@/api/login.ts";
 import { mapGetters } from "vuex";
 export default {
   components: {

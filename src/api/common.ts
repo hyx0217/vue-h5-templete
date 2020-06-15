@@ -8,7 +8,7 @@ export function getTopic() {
   });
 }
 //获取主题详情
-export function getTopicDetail(params) {
+export function getTopicDetail(params:any) {
   return request({
     url: "/getTopicDetail",
     method: "GET",

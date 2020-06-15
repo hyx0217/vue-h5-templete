@@ -1,6 +1,6 @@
 <script>
 import axios from "axios";
-import { register } from "@/api/login.js";
+import { register } from "@/api/login.ts";
 import { Toast } from "vant";
 
 export default {

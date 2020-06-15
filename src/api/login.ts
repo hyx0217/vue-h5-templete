@@ -1,6 +1,6 @@
 import request from "@/utils/request";
 //登录
-export function login(data) {
+export function login(data:any) {
   return request({
     url: "/login",
     method: "post",
@@ -8,7 +8,7 @@ export function login(data) {
   });
 }
 //注册
-export function register(data) {
+export function register(data:any) {
   return request({
     url: "/register",
     method: "post",
@@ -16,7 +16,7 @@ export function register(data) {
   });
 }
 //重置密码
-export function forget(data) {
+export function forget(data:any) {
   return request({
     url: "/forget",
     method: "post",
@@ -24,7 +24,7 @@ export function forget(data) {
   });
 }
 //获取列表
-export function getList(data) {
+export function getList(data:any) {
   return request({
     url: "/getList",
     method: "post",

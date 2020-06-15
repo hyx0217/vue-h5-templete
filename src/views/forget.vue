@@ -42,7 +42,7 @@
 <script>
 import wInput from "@/components/watch-login/watch-input.vue"; //input
 import wButton from "@/components/watch-login/watch-button.vue"; //button
-import { forget } from "@/api/login.js";
+import { forget } from "@/api/login.ts";
 import { Toast } from "vant";
 
 export default {

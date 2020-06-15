@@ -1,12 +1,12 @@
 import Vue from "vue";
-import Router from "vue-router";
+import Router,{ RouteConfig }  from "vue-router";
 Vue.use(Router);
 
-const routes = [
+const routes:Array<RouteConfig> = [
   {
     path: "/home",
     name: "home",
-    component: () => import(/* webpackChunkName: "about" */ "../views/home")
+    component: () => import(/* webpackChunkName: "about" */ "../views/home/index.vue")
   },
   {
     path: "/login",
@@ -34,9 +34,12 @@ const routes = [
   },
   {
     path: "",
-    redirect: "home",
-    component: () => import(/* webpackChunkName: "about" */ "../views/home")
+    redirect: "home"
   }
 ];
-
-export default new Router({ routes });
+const router = new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
+})
+export default router
