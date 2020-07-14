@@ -13,14 +13,14 @@ yarn install
 ```
 yarn serve
 cd server
-npm start
+npm run dev
 ```
 
 ### Compiles and minifies for production
 ```
-yarn serve
+yarn build
 cd server
-npm run dev
+npm start
 ```
 
 ### Lints and fixes files
