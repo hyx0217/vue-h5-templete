@@ -13,6 +13,13 @@ const service = axios.create({
 // request拦截器
 service.interceptors.request.use(
   config => {
+    /* 传入loading参数，可以显示loading框，解决重复点击问题 */
+    if(config.loading){
+      Toast.loading({
+        message: '加载中...',
+        forbidClick: true,
+      });
+    }
     if (getToken()) {
       config.headers["token"] = `${getToken()}`; // 让每个请求携带自定义token 请根据实际情况自行修改
     }
@@ -35,11 +42,13 @@ service.interceptors.response.use(
       Toast(`${res.data.msg}`);
       return Promise.reject("error");
     } else {
-      return res.data;
+      Toast.clear();
+      return Promise.resolve(res.data);
     }
   },
   error => {
     console.log("err" + error);
+    Toast.clear();
     return Promise.reject(error);
   }
 );
