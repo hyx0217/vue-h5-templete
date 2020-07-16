@@ -4,7 +4,7 @@
 ```
 h5端
 yarn install
-eggjs中间借口转发
+eggjs中间接口转发
 cd server
 yarn install
 ```
