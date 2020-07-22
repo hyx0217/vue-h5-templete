@@ -18,7 +18,7 @@
       </div>
       <wButton text="登 录"
                :rotate="isRotate"
-               @click.native="startLogin()"
+               @click="startLogin()"
                class="wbutton"></wButton>
 
       <!-- 其他登录 -->

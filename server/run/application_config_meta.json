@@ -1,0 +1,294 @@
+{
+  "security": {
+    "csrf": {
+      "headerName": "D:\\vue\\vue-h5-templete\\server\\config\\config.default.js",
+      "enable": "D:\\vue\\vue-h5-templete\\server\\config\\config.default.js",
+      "type": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "ignoreJSON": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "useSession": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "cookieName": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "sessionName": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "bodyName": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "queryName": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "refererWhiteList": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "domainWhiteList": "D:\\vue\\vue-h5-templete\\server\\config\\config.default.js",
+    "protocolWhiteList": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+    "defaultMiddleware": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+    "xframe": {
+      "enable": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "value": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "maxAge": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "includeSubdomains": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "value": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "value": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "policy": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js",
+      "checkAddress": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+    }
+  },
+  "cors": {
+    "origin": "D:\\vue\\vue-h5-templete\\server\\config\\config.default.js",
+    "allowMethods": "D:\\vue\\vue-h5-templete\\server\\config\\config.default.js"
+  },
+  "keys": "D:\\vue\\vue-h5-templete\\server\\config\\config.prod.js",
+  "middleware": "D:\\vue\\vue-h5-templete\\server\\config\\config.prod.js",
+  "baseUrl": "D:\\vue\\vue-h5-templete\\server\\config\\config.prod.js",
+  "session": {
+    "maxAge": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-session@3.2.0@egg-session\\config\\config.default.js",
+    "key": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-session@3.2.0@egg-session\\config\\config.default.js",
+    "httpOnly": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-session@3.2.0@egg-session\\config\\config.default.js",
+    "encrypt": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-session@3.2.0@egg-session\\config\\config.default.js"
+  },
+  "helper": {
+    "shtml": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-security@2.8.0@egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js",
+    "callback": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js",
+    "csrf": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-jsonp@2.0.0@egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js",
+    "templatePath": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-onerror@2.1.0@egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "dirs": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "queryField": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "cookieField": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "cookieDomain": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-i18n@2.1.1@egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-watcher@3.1.1@egg-watcher\\config\\config.default.js",
+    "eventSources": {
+      "default": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-watcher@3.1.1@egg-watcher\\config\\config.default.js",
+      "development": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-watcher@3.1.1@egg-watcher\\config\\config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-schedule@3.6.4@egg-schedule\\config\\config.default.js",
+      "file": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-schedule@3.6.4@egg-schedule\\config\\config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-schedule@3.6.4@egg-schedule\\config\\config.default.js"
+  },
+  "multipart": {
+    "mode": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "autoFields": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "defaultCharset": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "fieldSize": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "fields": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "fileSize": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "files": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "fileExtensions": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "whitelist": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "tmpdir": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js",
+    "cleanSchedule": {
+      "cron": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-multipart@2.10.3@egg-multipart\\config\\config.default.js"
+    }
+  },
+  "logrotator": {
+    "filesRotateByHour": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "maxFiles": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js",
+    "maxDays": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-logrotator@3.1.0@egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "dir": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "dynamic": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "preload": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "buffer": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.prod.js",
+    "maxFiles": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.default.js",
+    "maxAge": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-static@2.2.0@egg-static\\config\\config.prod.js"
+  },
+  "view": {
+    "root": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js",
+    "cache": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js",
+    "defaultExtension": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js",
+    "defaultViewEngine": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js",
+    "mapping": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg-view@2.1.2@egg-view\\config\\config.default.js"
+  },
+  "env": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "name": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "cookies": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "proxy": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "maxIpsCount": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "maxProxyCount": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "protocolHeaders": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "ipHeaders": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "hostHeaders": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "pkg": {
+    "name": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "version": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "description": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "private": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "egg": {
+      "declarations": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "dependencies": {
+      "egg": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "egg-cors": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "egg-scripts": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "lodash": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "mockjs": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "p-map": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "autod": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "autod-egg": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "egg-bin": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "egg-ci": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "egg-mock": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "eslint": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "eslint-config-egg": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "engines": {
+      "node": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "scripts": {
+      "start": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "stop": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "dev": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "debug": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "test": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "test-local": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "cov": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "lint": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "ci": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "autod": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "ci": {
+      "version": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "repository": {
+      "type": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "url": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "author": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "license": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "baseDir": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "HOME": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "rundir": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "notFound": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "sitefile": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "middlewares": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "httpClient": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "encoding": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "formLimit": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "jsonLimit": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "textLimit": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "strict": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "depth": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "parameterLimit": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "onerror": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "logger": {
+    "dir": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "encoding": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "env": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "level": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "consoleLevel": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "outputJSON": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "buffer": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "appLogName": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "coreLogName": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "agentLogName": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "errorLogName": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "coreLogger": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "allowDebugAtProd": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "request": {
+      "timeout": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "freeSocketTimeout": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "maxSockets": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "freeSocketTimeout": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "maxSockets": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "logging": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "workerStartTimeout": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "serverTimeout": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "port": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+      "hostname": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js",
+    "responseTimeout": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+  },
+  "onClientError": "D:\\vue\\vue-h5-templete\\server\\node_modules\\_egg@2.27.0@egg\\config\\config.default.js"
+}

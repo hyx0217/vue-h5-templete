@@ -28,7 +28,7 @@
 
       <wButton text="注 册"
                :rotate="isRotate"
-               @click.native="startReg()"></wButton>
+               @click="startReg()"></wButton>
 
       <!-- 底部信息 -->
       <div class="footer">
