@@ -73,7 +73,15 @@ class HomeController extends Controller {
       const res = await ctx.helper.http(item.url);
       arr[item.name] = res.data;
     });
-    this.success({ code: '000000', msg: 'success', data: arr });
+    this.success({ code: 1, msg: 'success', data: arr });
+  }
+  // 十万条数据
+  getMuchList(){
+    let arr=[]
+    for(let i=0;i<100000;i++){
+      arr.push(i)
+    }
+    this.success({code:1,msg:'success',data:arr})
   }
 }
 

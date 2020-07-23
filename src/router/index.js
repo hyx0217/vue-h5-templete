@@ -6,36 +6,41 @@ const routes = [
   {
     path: "/home",
     name: "home",
-    component: () => import(/* webpackChunkName: "about" */ "../views/home")
+    component: () => import(/* webpackChunkName: "home" */ "../views/home")
+  },
+  {
+    path: "/muchList",
+    name: "muchList",
+    component: () => import(/* webpackChunkName: "muchList" */ "../views/home/list")
   },
   {
     path: "/login",
     name: "login",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/login.vue")
+      import(/* webpackChunkName: "login" */ "../views/login.vue")
   },
   {
     path: "/register",
     name: "register",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/register.vue")
+      import(/* webpackChunkName: "register" */ "../views/register.vue")
   },
   {
     path: "/forget",
     name: "forget",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/forget.vue")
+      import(/* webpackChunkName: "forget" */ "../views/forget.vue")
   },
   {
     path: "/signin_github",
     name: "github",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/github.vue")
+      import(/* webpackChunkName: "github" */ "../views/github.vue")
   },
   {
     path: "",
     redirect: "home",
-    component: () => import(/* webpackChunkName: "about" */ "../views/home")
+    component: () => import("../views/home")
   }
 ];
 

@@ -5,6 +5,7 @@
       <img src="@/assets/logo-home.png" />
     </div>
     <div class="flex">用户名：{{ user.userName }}</div>
+    <router-link to="muchList">虚拟列表</router-link>
     <vant-list
       class="flex-col list"
       v-model="loading"

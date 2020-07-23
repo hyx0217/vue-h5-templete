@@ -4,4 +4,9 @@
   </div>
 </template>
 
-<style></style>
+<style>
+html,body{
+  height: 100%;
+}
+#app{height: 100%;}
+</style>

@@ -11,5 +11,8 @@ export const forget = (data) => request({ url: "/forget", method: "post", data }
 //获取列表
 export const getList = (data) => request({ url: "/getList", method: "post", data});
 
+//获取十万条列表
+export const getMuchList = (data) => request({ url: "/getMuchList", method: "post", data});
+
 //获取列表
 export const getUser = () => request({ url: "/getUser", method: "post", });

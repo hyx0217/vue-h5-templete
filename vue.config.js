@@ -6,8 +6,10 @@ function resolve(dir) {
 }
 module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "/web" : "/",
-  configureWebpack: (config) => {
+  chainWebpack: (config) => {
     config.resolve.alias.set("@", resolve("src"));
+  },
+  configureWebpack: (config) => {
     /* gzip压缩，nginx需要开启gzip*/
     if (isProd) {
       // 配置webpack 压缩

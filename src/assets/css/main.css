@@ -1,3 +1,6 @@
+*{
+	margin:0
+}
 .content {
 	display: flex;
 	flex-direction: column;
@@ -66,7 +69,9 @@
 .github_color{
 	color: #24292E;
 }
-
+.flex-1{
+	flex: 1;
+}
 /* 底部 */
 .footer{
 	display: flex;

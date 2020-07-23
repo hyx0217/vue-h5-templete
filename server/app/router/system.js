@@ -8,4 +8,6 @@ module.exports = app => {
   app.router.post('/forget', system.forget);
   app.router.post('/getUser', system.getUser);
   app.router.post('/getList', system.getList);
+  app.router.post('/getMuchList', system.getMuchList);
+
 };
