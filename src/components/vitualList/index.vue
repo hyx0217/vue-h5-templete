@@ -30,11 +30,15 @@ export default {
       startIndex: 0,
       endIndex: 0,
       translateY: '',
+      viewCount: 0
     };
   },
   computed: {
     filterList() {
-      return this.list.slice(this.startIndex, Math.min(this.endIndex,this.list.length));
+      return this.list.slice(
+        this.startIndex,
+        Math.min(this.endIndex, this.list.length)
+      );
     },
     padHeight() {
       return this.list.length * this.itemHeight;
@@ -44,14 +48,17 @@ export default {
     scrollEvnet() {
       //当前滚动位置
       let scrollTop = this.$refs.list.scrollTop;
-      this.startIndex = Math.floor(scrollTop / this.itemHeight);
-      this.endIndex = this.startIndex + Math.floor(this.$el.clientHeight / this.itemHeight);
-      this.translateY = `translateY(${scrollTop-(scrollTop % this.itemHeight)}px)`;
+      this.startIndex = Math.ceil(scrollTop / this.itemHeight);
+      this.endIndex = this.startIndex + this.viewCount;
+      this.translateY = `translateY(${scrollTop -
+        (scrollTop % this.itemHeight)}px)`;
     }
   },
   mounted() {
+    this.viewCount = Math.floor(this.$el.clientHeight / this.itemHeight);
+    console.log(this.$el.clientHeight);
     this.startIndex = 0;
-    this.endIndex = Math.floor(this.$el.clientHeight / this.itemHeight);
+    this.endIndex = this.startIndex + this.viewCount;
   }
 };
 </script>
@@ -83,7 +90,6 @@ export default {
 .item {
   display: flex;
   align-items: center;
-  height: 200px;
   border-top: 1px solid #ccc;
 }
 </style>

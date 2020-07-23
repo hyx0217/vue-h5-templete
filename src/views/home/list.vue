@@ -35,7 +35,7 @@ export default {
   methods: {
     async getList() {
       let res = await getMuchList();
-      this.list = res.data;
+      this.list = res.data.slice(0,20);
     }
   },
   mounted() {
