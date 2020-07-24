@@ -6,7 +6,7 @@ yarn install
 cd server
 yarn install
 ```
-### quick start
+### 前端程序
 ```
 h5端
 yarn install
@@ -15,7 +15,7 @@ cd server
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 中间层eggjs代理，里面有一些接口转发和mock数据
 ```
 yarn serve
 cd server
