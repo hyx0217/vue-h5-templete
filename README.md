@@ -15,7 +15,7 @@ cd server
 yarn install
 ```
 
-### 中间层eggjs代理，里面有一些接口转发和代理
+### 中间层eggjs代理，里面有一些接口转发和mock数据
 ```
 yarn serve
 cd server
