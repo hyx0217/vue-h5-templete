@@ -1,0 +1,24 @@
+2020-07-23 09:40:52,261 INFO 9752 [Timer] D:\vue\vue-h5-templete\server\node_modules\_egg-multipart@2.10.3@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 67747741ms at 2020-07-24 04:30:00.002
+2020-07-23 09:40:52,262 INFO 9752 [Timer] D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 51547739ms at 2020-07-24 00:00:00.001
+2020-07-23 09:40:52,262 INFO 9752 [Timer] D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 51548738ms at 2020-07-24 00:00:01.000
+2020-07-23 09:40:52,129 INFO 9864 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-multipart@2.10.3@egg-multipart\app\schedule\clean_tmpdir.js
+2020-07-23 09:40:52,129 INFO 9864 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2020-07-23 09:40:52,129 INFO 9864 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2020-07-23 09:50:07,450 INFO 2908 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-multipart@2.10.3@egg-multipart\app\schedule\clean_tmpdir.js
+2020-07-23 09:50:07,450 INFO 2908 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2020-07-23 09:50:07,450 INFO 2908 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2020-07-23 09:50:08,664 INFO 6892 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-multipart@2.10.3@egg-multipart\app\schedule\clean_tmpdir.js
+2020-07-23 09:50:08,665 INFO 6892 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2020-07-23 09:50:08,665 INFO 6892 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2020-07-23 09:50:29,857 INFO 7120 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-multipart@2.10.3@egg-multipart\app\schedule\clean_tmpdir.js
+2020-07-23 09:50:29,858 INFO 7120 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2020-07-23 09:50:29,858 INFO 7120 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2020-07-23 09:52:06,945 INFO 4936 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-multipart@2.10.3@egg-multipart\app\schedule\clean_tmpdir.js
+2020-07-23 09:52:06,945 INFO 4936 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2020-07-23 09:52:06,945 INFO 4936 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2020-07-23 10:50:39,155 INFO 12308 [Timer] D:\vue\vue-h5-templete\server\node_modules\_egg-multipart@2.10.3@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 63560848ms at 2020-07-24 04:30:00.003
+2020-07-23 10:50:39,155 INFO 12308 [Timer] D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 47360845ms at 2020-07-24 00:00:00.000
+2020-07-23 10:50:39,156 INFO 12308 [Timer] D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 47361845ms at 2020-07-24 00:00:01.001
+2020-07-23 10:50:39,041 INFO 11552 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-multipart@2.10.3@egg-multipart\app\schedule\clean_tmpdir.js
+2020-07-23 10:50:39,041 INFO 11552 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2020-07-23 10:50:39,041 INFO 11552 [egg-schedule]: register schedule D:\vue\vue-h5-templete\server\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
