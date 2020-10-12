@@ -12,32 +12,32 @@ module.exports = {
     //  config.plugins.delete('preload');
     config.resolve.alias.set("@", resolve("src"));
     // 忽略生成环境打包的文件
-    var externals = {
-      vue: "Vue",
-      axios: "axios",
-      "vue-router": "VueRouter",
-      vuex: "Vuex",
-      // vant: 'Vant'
-    };
-    config.externals(externals);
+    // var externals = {
+    //   vue: "Vue",
+    //   axios: "axios",
+    //   "vue-router": "VueRouter",
+    //   vuex: "Vuex",
+    //   // vant: 'Vant'
+    // };
+    // config.externals(externals);
     // cdn可替换成自己服务器上的，更加稳定
-    const cdn = {
-      css: [],
-      js: [
-        // vue
-        "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js",
-        // vue-router
-        "https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.min.js",
-        // vuex
-        "https://cdn.jsdelivr.net/npm/vuex/dist/vuex.min.js",
-        // axios
-        "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js",
-      ],
-    };
-    config.plugin("html").tap((args) => {
-      args[0].cdn = cdn;
-      return args;
-    });
+    // const cdn = {
+    //   css: [],
+    //   js: [
+    //     // vue
+    //     "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js",
+    //     // vue-router
+    //     "https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.min.js",
+    //     // vuex
+    //     "https://cdn.jsdelivr.net/npm/vuex/dist/vuex.min.js",
+    //     // axios
+    //     "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js",
+    //   ],
+    // };
+    // config.plugin("html").tap((args) => {
+    //   args[0].cdn = cdn;
+    //   return args;
+    // });
   },
   configureWebpack: (config) => {
     /* gzip压缩，nginx需要开启gzip*/
