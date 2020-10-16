@@ -21,7 +21,7 @@
   </div>
 </template>
 <script>
-import { computed, ref} from 'vue'
+import { computed, ref } from "vue";
 var countDown;
 export default {
   props: {
@@ -31,46 +31,46 @@ export default {
     maxlength: {
       //最大长度
       type: [Number, String],
-      default: 20,
+      default: 20
     },
     isShowPass: {
       //是否显示密码图标（二选一）
       type: [Boolean, String],
-      default: false,
+      default: false
     },
     isShowCode: {
       //是否显示获取验证码（二选一）
       type: [Boolean, String],
-      default: false,
+      default: false
     },
     codeText: {
       type: String,
-      default: "获取验证码",
+      default: "获取验证码"
     },
     setTime: {
       //倒计时时间设置
       type: [Number, String],
-      default: 60,
+      default: 60
     }
   },
-/*   model: {
+  /*   model: {
     prop: 'inputValue',
     event: 'input'
   }, */
-  setup (props, { emit }) {
-    const showPassword = ref(false);//是否显示明文
-    const second = ref(0);//倒计时
-    const isRunCode = ref(false);//是否开始倒计时
+  setup(props, { emit }) {
+    const showPassword = ref(false); //是否显示明文
+    const second = ref(0); //倒计时
+    const isRunCode = ref(false); //是否开始倒计时
     const showPass = () => {
       //是否显示密码
-      showPassword.vlaue = !showPassword.value
-    }
-    const runCode = (val) => {
+      showPassword.value = !showPassword.value;
+    };
+    const runCode = val => {
       //开始倒计时
       if (String(val) == "0") {
         //判断是否需要终止循环
         second.value = 0; //初始倒计时
-        clearInterval(countDown);//清理循环
+        clearInterval(countDown); //清理循环
         isRunCode.value = false; //关闭循环状态
         return false;
       }
@@ -78,51 +78,51 @@ export default {
         //判断是否开始倒计时，避免重复点击
         return false;
       }
-      isRunCode.value = true
-      second.value = props.setTime //倒数秒数
+      isRunCode.value = true;
+      second.value = props.setTime; //倒数秒数
       countDown = setInterval(() => {
-        second.value--
+        second.value--;
         if (second.value === 0) {
-          isRunCode.value = false
-          clearInterval(countDown)
+          isRunCode.value = false;
+          clearInterval(countDown);
         }
-      }, 1000)
-    }
-    const onInput = (e) => {
+      }, 1000);
+    };
+    const onInput = e => {
       //传出值
-      emit('inputText', e.target.value)
-    }
+      emit("inputText", e.target.value);
+    };
     const setCode = () => {
       //设置获取验证码的事件
       if (isRunCode.value) {
         //判断是否开始倒计时，避免重复点击
         return false;
       }
-      emit('setCode')
-    }
+      emit("setCode");
+    };
     const _type = computed(() => {
       //处理值
-      const type = props.type
-      return type == 'password' ? 'text' : type
-    })
-    const _isShowPass = computed(() => String(props.isShowPass) !== 'false')
-    const _isShowCode = computed(() => String(props.isShowCode) !== 'false')
+      const type = props.type;
+      return type == "password" ? "text" : type;
+    });
+    const _isShowPass = computed(() => String(props.isShowPass) !== "false");
+    const _isShowCode = computed(() => String(props.isShowCode) !== "false");
     const _setTime = computed(() => {
-      const setTime = Number(props.setTime)
-      return setTime > 0 ? setTime : 60
-    })
+      const setTime = Number(props.setTime);
+      return setTime > 0 ? setTime : 60;
+    });
     const getVerCodeSecond = computed(() => {
       //验证码倒计时计算
       if (second.value <= 0) {
         return props.codeText;
       } else {
         if (second.value < 10) {
-          return '0' + second.value;
+          return "0" + second.value;
         } else {
           return second.value;
         }
       }
-    })
+    });
     return {
       showPassword,
       second,
@@ -135,9 +135,10 @@ export default {
       _isShowPass,
       _isShowCode,
       _setTime,
-      getVerCodeSecond    }
+      getVerCodeSecond
+    };
   }
-}
+};
 </script>
 
 <style>
@@ -165,8 +166,8 @@ export default {
   /* line-height: 100px; */
   padding-right: 10px;
   margin-left: 20px;
-  border:none;
-  outline:none;
+  border: none;
+  outline: none;
 }
 .vercode {
   color: rgba(0, 0, 0, 0.7);

@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
-    "vue": "^3.0.0-beta.1",
-    "vue-router": "^4.0.0-alpha.5",
-    "vuex": "^4.0.0-alpha.1"
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-beta.10",
+    "vuex": "^4.0.0-beta.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",

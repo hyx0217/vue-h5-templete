@@ -28,7 +28,7 @@
 
       <wButton text="重置密码"
                :rotate="isRotate"
-               @click.native="startForget"></wButton>
+               @click="startForget"></wButton>
     </div>
   </div>
 </template>

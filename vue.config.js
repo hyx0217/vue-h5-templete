@@ -45,7 +45,6 @@ module.exports = {
   chainWebpack(config) {
     config.plugins.delete("preload"); // TODO: need test
     config.plugins.delete("prefetch"); // TODO: need test
-
     // set svg-sprite-loader
     config.module
       .rule("svg")
@@ -62,7 +61,6 @@ module.exports = {
         symbolId: "icon-[name]",
       })
       .end();
-
 
     config.when(process.env.NODE_ENV !== "development", (config) => {
       config
